@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Light mode only. Colors sampled from design/candidate-dashboard.png. */
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-instrument-serif);
+  --font-heading: var(--font-inter);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Vettly-specific tokens */
+  --color-hero: var(--hero);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-hero-muted: var(--hero-muted);
+  --color-hero-caption: var(--hero-caption);
+  --color-hero-check: var(--hero-check);
+  --color-brand-green: var(--brand-green);
+  --color-track: var(--track);
+  --color-nav-active: var(--nav-active);
+  --color-table-head: var(--table-head);
+  --color-pill-green: var(--pill-green);
+  --color-pill-green-foreground: var(--pill-green-foreground);
+  --color-pill-blue: var(--pill-blue);
+  --color-pill-blue-foreground: var(--pill-blue-foreground);
+  --color-pill-amber: var(--pill-amber);
+  --color-pill-amber-foreground: var(--pill-amber-foreground);
+  --color-pill-red: var(--pill-red);
+  --color-pill-red-foreground: var(--pill-red-foreground);
+  --color-pill-gray: var(--pill-gray);
+  --color-pill-gray-foreground: var(--pill-gray-foreground);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 1.5rem; /* cards: 24px */
+  --radius-4xl: 1.75rem; /* hero card: 28px */
+}
+
+:root {
+  --background: #f6f6f3;
+  --foreground: #111110;
+  --card: #ffffff;
+  --card-foreground: #111110;
+  --popover: #ffffff;
+  --popover-foreground: #111110;
+  --primary: #111110;
+  --primary-foreground: #ffffff;
+  --secondary: #ffffff;
+  --secondary-foreground: #111110;
+  --muted: #edede8;
+  --muted-foreground: #5a5a54;
+  --accent: #edede8;
+  --accent-foreground: #111110;
+  --destructive: #b42318;
+  --border: #e4e4de;
+  --input: #e4e4de;
+  --ring: #a3a39c;
+  --radius: 1rem;
+
+  --hero: #111110;
+  --hero-foreground: #ffffff;
+  --hero-muted: #d2d2ca;
+  --hero-caption: #b9b9b0;
+  --hero-check: #7dd3a0;
+  --brand-green: #1f7a4d;
+  --track: #ecece7;
+  --nav-active: #edede8;
+  --table-head: #fafaf7;
+  --pill-green: #e4f3ea;
+  --pill-green-foreground: #14573a;
+  --pill-blue: #e6eefc;
+  --pill-blue-foreground: #1b479c;
+  --pill-amber: #fbf1dc;
+  --pill-amber-foreground: #8a5a00;
+  --pill-red: #fbe9e7;
+  --pill-red-foreground: #a8281b;
+  --pill-gray: #efefea;
+  --pill-gray-foreground: #4a4a45;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: light;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@utility caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
